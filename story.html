@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>太子集團通報解析</title>
+    <style>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+
+        header {
+            padding: 24px;
+            background: transparent;
+            color: #1f2933;
+            text-align: center;
+        }
+
+        main {
+            padding: 28px;
+            max-width: 720px;
+            margin: 32px auto;
+            background: transparent;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 32px;
+            color: #2d3748;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 0 0 16px;
+            color: #2d3748;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin: 0 0 14px;
+            color: #4a5568;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 22px 0 10px;
+            color: #2d3748;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 改成 2 列 */
+            justify-content: center;
+            gap: 20px;
+            max-width: 440px;
+            /* 限制最大寬度 */
+            margin: 0 auto;
+            /* 水平居中 */
+        }
+
+        .card {
+            width: 200px;
+            height: 300px;
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card-front,
+        .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .card-front {
+            background: #AFDCF5;
+            color: black;
+        }
+
+        .card-back {
+            background: #f5c7c6;
+            color: black;
+            transform: rotateY(180deg);
+            font-size: 10px;
+            /* 縮小卡片背面的字體大小 */
+            padding: 15px;
+            /* 增加內邊距，讓文字與卡片邊緣保持距離 */
+            box-sizing: border-box;
+            /* 確保內邊距不影響卡片大小 */
+        }
+
+        .workflow {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .workflow img {
+            width: 100%;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <img src="洗錢封面.png" alt="洗錢示意圖"
+            style="width: 10%; max-width: 200px; display: block; margin: 0 auto; margin-bottom: 20px;">
+
+        <h1>數據揭秘：太子集團 52 件可疑交易背後，<br>調查局洗錢防制處如何運作？</h1>
+        <p style="font-size: 0.9rem; color: #6b7280; margin-top: 20px;">文字/ 黃俐珏<br>設計/ 黃俐珏</p>
+    </header>
+    <main>
+        <p><em>「洗錢防制處自108年底陸續接獲銀行申報案關對象，初篩情報26件分送予友軍及業務單位參處，協助勾勒出太子集團組織輪廓，並掌握其在台洗錢及資產持有概況。」</em></p>
+        <p>這組數字，是調查局日前在立法院面對有關太子集團案件質詢時所提出的說明。數據本身精確，卻也引發外界質疑：當金融機構已多次申報異常交易，調查局亦掌握相關情資時，洗錢防制體系究竟能在什麼階段發揮實質作用？</p>
+        <p style="margin-bottom: 30px;">
+            隨著太子集團案件曝光，這個平時較少受到外界關注的單位——調查局洗錢防制處——開始浮上檯面。洗錢防制處如何運作？他們能掌握哪些資訊，又有哪些制度上的限制？本篇報導採訪兩位洗錢防制處調查官，試圖從制度設計與數據分析出發，回答這些問題。
+        </p>
+
+        <div class="section-title">洗錢防制處的角色與職責</div>
+        <p>洗錢防制處隸屬於法務部調查局，為我國唯一的金融情報中心（Financial Intelligence Unit,
+            FIU）。其主要職責在於接收、分析並分送疑似涉及洗錢或資恐之交易資料，以及與洗錢、前置犯罪及資恐相關的其他金融情報。</p>
+        <section class="workflow">
+            <h3>洗錢防制作業流程圖</h3>
+            <img src="洗錢防制處作業流程圖.png" alt="洗錢防制作業流程圖"
+                style="width: 100%; max-width: 800px; display: block; margin: 0 auto;">
+        </section>
+
+        <p>洗錢防制處游調查官表示，其工作核心在於依法受理來自金融業者、指定之非金融事業或人員申報，以及海關通報的相關情資，並進行加值分析。若分析結果顯示有查緝犯罪、追討不法所得、健全洗錢防制制度、維護金融秩序或強化國際合作之必要，即會研編成金融情報，分送國內外相關權責機關。
+        </p>
+        <p>
+            在太子集團案件中，洗錢防制處亦依循相同程序處理情資。她指出：「我們確實接獲來52起可疑交易通報，經綜整相關資料後，陸續研編加值金融情報26件，並即時分送予相關執法機關及局內業務單位。」</p>
+
+        <p>但外界質疑，為何台灣未能在美國政府通報或行動之前，對太子集團展開起訴。對此，黃姓調查官說明，從調查局的制度定位來看，洗錢防制處的功能在於發現與分析異常金流，並將相關情資提供給主管機關或檢調單位參考。</p>
+        <p style="margin-bottom: 30px;">她強調，調查局及調查官屬於偵查輔助機關，並無起訴權限，檢察官才是偵查與起訴的主體。因此，是否立案偵辦、何時啟動偵查，仍須由檢察官依據整體證據判斷。</p>
+
+        <div class="section-title">修法後案件量上升，制度如何消化？</div>
+        <p>隨著105年《洗錢防制法》修法上路，近9年來，違反洗錢防制法案件數量呈現上升趨勢。</p>
+        <p style="margin-bottom: 30px;">
+            在107年最新一次修法中，最高法院刑事大法庭裁定統一見解，認為人頭帳戶提供者、詐騙集團車手在一定條件下亦可成立一般洗錢罪，特定犯罪範圍的擴大，進一步推升相關案件數量。</p>
+        <div style="width: 100%; height: 400px; margin-top: 30px;">
+            <canvas id="caseChart"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const ctx = document.getElementById('caseChart').getContext('2d');
+            const caseYears = ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024（1-11）'];
+            const caseValues = [53, 549, 1520, 3767, 4197, 7189, 6269, 6310];
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: caseYears,
+                    datasets: [{
+                        label: '案件數',
+                        data: caseValues,
+                        backgroundColor: 'rgba(211, 63, 73, 0.7)',
+                        borderColor: 'rgba(211, 63, 73, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return context.raw.toLocaleString();
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: '年份'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: '案件數'
+                            },
+                            ticks: {
+                                callback: function (value) {
+                                    return value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <p>根據統計，自2017年至2024年，洗錢防制處接獲的可疑交易申報（STR）年申報量大致維持在2萬至3萬6千件之間。2018年受修法影響，申報量達到35,869件，其中本國銀行申報件數占七成以上。</p>
+        <div style="width: 100%; height: 400px; margin-top: 30px;">
+            <canvas id="strChart"></canvas>
+        </div>
+        <script>
+            const strCtx = document.getElementById('strChart').getContext('2d');
+            const strData = {
+                labels: ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                datasets: [{
+                    label: '可疑交易報告申報件數',
+                    data: [23651, 35869, 26481, 24406, 22846, 24719, 29670, 30679],
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            };
+
+            const strOptions = {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.raw.toLocaleString();
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: '年份'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: '申報件數'
+                        },
+                        ticks: {
+                            callback: function (value) {
+                                return value.toLocaleString();
+                            }
+                        }
+                    }
+                }
+            };
+
+            new Chart(strCtx, {
+                type: 'bar',
+                data: strData,
+                options: strOptions
+            });
+        </script>
+        <p>但是，游姓調查官指出，上萬件申報並不代表等量的犯罪案件，多數情資會經過整併後，以特定對象為單位進行分析與分送。同時，她指出，洗錢防制處在無法立即確認犯罪事證時，會先將情資存入資料庫。當日後出現相同個人、法人或公司再次被申報時，相關資料即可被重新提取、整併分析，進而研編成金融情報分送相關機關。
+        </p>
+        <p style="margin-bottom: 30px;">
+            以2024年為例，申報案件中約74%會進入STR資料庫，20%由打詐專案處理，僅約3.79%與1.75%分別由執法、院檢及其他權責機關，或調查局辦案單位進一步處理。</p>
+
+        <div class="section-title">虛擬資產通報量攀升的新挑戰</div>
+        <p>然而，對多數民眾而言，「可疑交易申報」與「金融情報分析」仍屬抽象概念。究竟哪些行業，近年來最容易成為洗錢活動的溫床？洗錢防制處及相關主管機關，通常又將哪些產業列為重點關注對象？</p>
+        <p style="color: #6b7280; font-size: 0.9rem;">【互動卡片｜洗錢與資恐弱點辨識結果】（點擊卡片，看看哪個產業是高風險產業？）
+
+            <br>
+        </p>
+        <div class="card-container"
+            style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px;">
+            <div class="card" style="width: 200px; height: 300px; perspective: 1000px;">
+                <div class="card-inner"
+                    style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <div class="card-front"
+                        style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: #AFDCF5; color: black; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                        線上遊戲業務 </div>
+                    <div class="card-back"
+                        style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: #f5c7c6; color: black; display: flex; align-items: center; justify-content: center; font-size: 14px; transform: rotateY(180deg);">
+                        風險等級：中<br>
+                        原因：戲點數卡具有匿名性及流通性，使該項品成線上戲事業各項業務中較具洗錢風險之品，但現今以手機戲占大宗，多數戲玩家之消費習慣早已轉用信用卡直接消費儲值主(即俗稱之手「課金」)，戲點數卡銷售相對僅占整體戲點數收入之一小部分。
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 200px; height: 300px; perspective: 1000px;">
+                <div class="card-inner"
+                    style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <div class="card-front"
+                        style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: #AFDCF5; color: black; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                        本國銀行</div>
+                    <div class="card-back"
+                        style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: #f5c7c6; color: black; display: flex; align-items: center; justify-content: center; font-size: 14px; transform: rotateY(180deg);">
+                        風險等級：非常高<br>原因：本國銀行提供涉及現金收付和貨幣工具之存款帳，另匯款業務可跨境移轉資金，具有顯著的資金移轉能力，客類型廣泛，且行業活動涉及高風險司法管轄區及受關注國家，服務管道包括非面對面交易，極易洗錢犯罪者利用，實務上亦多見不當利用本國銀行提供之品或服務進行洗錢之案例。
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 200px; height: 300px; perspective: 1000px;">
+                <div class="card-inner"
+                    style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <div class="card-front"
+                        style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: #AFDCF5; color: black; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                        虛擬服務之事業或人員</div>
+                    <div class="card-back"
+                        style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: #f5c7c6; color: black; display: flex; align-items: center; justify-content: center; font-size: 14px; transform: rotateY(180deg);">
+                        風險等級：非常高<br>原因：提供虛擬服務之事業或人員因擬資服務具有高度匿名性，交易經濟價值，去中心化，跨境移轉及快速交易等特性，致該業被利用於洗錢之案件日增。
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="width: 200px; height: 300px; perspective: 1000px;">
+                <div class="card-inner"
+                    style="position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.6s;">
+                    <div class="card-front"
+                        style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: #AFDCF5; color: black; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                        外國銀行在臺分行</div>
+                    <div class="card-back"
+                        style="position: absolute; width: 100%; height: 100%; backface-visibility: hidden; background: #f5c7c6; color: black; display: flex; align-items: center; justify-content: center; font-size: 14px; transform: rotateY(180deg);">
+                        風險等級：高<br>原因：外國銀行在臺分行因隸屬國外總行或集團，可透過其總行或集團之網絡，有能力提供快速的資金移動與多樣的金融服務，又外國銀行在臺分行以專業機構投資人或大型企業客主，該等客可能透過複雜的法律協議進行交易，實質受益人較不易驗證。
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.querySelectorAll('.card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const inner = card.querySelector('.card-inner');
+                    inner.style.transform = inner.style.transform === 'rotateY(180deg)' ? 'rotateY(0deg)' : 'rotateY(180deg)';
+                });
+            });
+        </script>
+        <p><br>除了本國銀行申報件數平均占歷年申報量7成，虛擬資產業者的可疑交易申報呈現明顯成長。自2022年的227件，上升至2023年的918件，增幅接近四倍。此次美國政府在太子集團案件中，亦查獲價值超過140億美元的比特幣，並指控柬埔寨商業帝國太子集團（Prince
+            Group）創辦人涉嫌操縱大規模加密貨幣詐騙案，更凸顯虛擬資產風險。
+        </p>
+        <p>根據《2024年國家洗錢、資恐及資武擴散風險評估報告》，由於虛擬資產具高度匿名性、去中心化、跨境快速移轉及高經濟價值等特性，提供虛擬資產服務之事業或人員，已被列為「非常高」風險的產業別。</p>
+        <p>游檢察官表示，因應虛擬資產犯罪風險上升，政府於113年進行洗錢防制法重大修正，自113年7月起，提供虛擬資產服務之事業或人員（VASP）須向金管會完成登記後，方得合法營業。未完成登記者，將構成違法行為。</p>
+        <p style="margin-bottom: 30px;">此外，金管會檢查局亦加強查核，2025年已對11家虛擬資產業者裁罰，累計裁處金額超過1,300萬元。</p>
+
+        <div class="section-title">「我在明，敵在暗」的長期戰役</div>
+        <p>隨著洗錢型態日益複雜，金融與司法體系在防制洗錢上，長期處於「我在明、敵在暗」的不對稱狀態。洗錢防制的演進，往往是一種回應社會變遷、修補制度缺口與因應新型犯罪的「反應式修法」過程。</p>
+        <p style="margin-bottom: 30px;">
+            同時她也表示，金融情資的申報是一件不斷持續的進程，洗錢案沒有查完的一天。洗錢防制處未來將持續加強跨部會合作與國際情報交換，強化監理與風險控管，降低非法資金進入我國金融體系的可能性。</p>
+
+
+    </main>
+</body>
+
+</html>
